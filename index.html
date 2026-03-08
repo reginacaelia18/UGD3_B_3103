@@ -31,27 +31,21 @@
     </div>
 
     <script>
-        // Mengambil elemen form berdasarkan ID
         const loginForm = document.getElementById('loginForm');
 
         loginForm.addEventListener('submit', function(event) {
-            // Mencegah halaman reload saat form disubmit
             event.preventDefault();
 
-            // Mengambil nilai dari input username dan password
             const usernameValue = document.getElementById('username').value.trim();
             const passwordValue = document.getElementById('password').value.trim();
             const errorMessage = document.getElementById('errorMessage');
 
-            // Mandatory: Validasi Username atau Password tidak boleh kosong [cite: 15]
             if (usernameValue === "" || passwordValue === "") {
                 errorMessage.textContent = "Username atau Password tidak boleh kosong.";
-                errorMessage.style.display = "block"; // Menampilkan pesan error (Manipulasi DOM)
+                errorMessage.style.display = "block"; 
             } else {
-                errorMessage.style.display = "none"; // Menyembunyikan pesan error jika sudah diisi
+                errorMessage.style.display = "none"; 
                 
-                // Mandatory: Jika terisi, arahkan ke akun Instagram masing-masing [cite: 16]
-                // Ganti 'username_ig_kamu' di bawah ini dengan username Instagram aslimu
                 window.location.href = "https://www.instagram.com/rgncc._/";
             }
         });
