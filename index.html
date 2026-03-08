@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Form Sign In</h2>
+        <hr class="divider">
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Masukkan Username">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Masukkan Password">
+            </div>
+            
+            <hr class="divider">
+            
+            <p id="errorMessage" class="error-message"></p>
+            
+            <button type="submit" id="signInBtn">Sign In</button>
+        </form>
+    </div>
+
+    <script>
+        // Mengambil elemen form berdasarkan ID
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', function(event) {
+            // Mencegah halaman reload saat form disubmit
+            event.preventDefault();
+
+            // Mengambil nilai dari input username dan password
+            const usernameValue = document.getElementById('username').value.trim();
+            const passwordValue = document.getElementById('password').value.trim();
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Mandatory: Validasi Username atau Password tidak boleh kosong [cite: 15]
+            if (usernameValue === "" || passwordValue === "") {
+                errorMessage.textContent = "Username atau Password tidak boleh kosong.";
+                errorMessage.style.display = "block"; // Menampilkan pesan error (Manipulasi DOM)
+            } else {
+                errorMessage.style.display = "none"; // Menyembunyikan pesan error jika sudah diisi
+                
+                // Mandatory: Jika terisi, arahkan ke akun Instagram masing-masing [cite: 16]
+                // Ganti 'username_ig_kamu' di bawah ini dengan username Instagram aslimu
+                window.location.href = "https://www.instagram.com/rgncc._/";
+            }
+        });
+    </script>
+</body>
+</html>

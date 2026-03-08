@@ -1,0 +1,82 @@
+/* Reset margin dan mengatur tinggi penuh */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    /* Silakan ganti URL di bawah ini dengan gambar background milikmu */
+    background-image: url('gua.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-family: serif;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px dashed #ccc;
+    margin: 15px 0;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+    font-size: 12px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Mandatory: Efek hover pada tombol Sign In */
+button:hover {
+    background-color: #0056b3; 
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: none; /* Disembunyikan secara default */
+}
